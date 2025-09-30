@@ -26,7 +26,7 @@
 		<url/>
 	</scm>
 	<properties>
-		<java.version>21</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -53,20 +53,20 @@
 				<version>2.9.0</version>
 			    <configuration>
 			        <schemaVersion>v2</schemaVersion>
-			        <resourceGroup>azure-app-java-and-azure</resourceGroup>
-			        <appName>springboot-on-azure</appName>
+					<appName>azure-app-java</appName>
+					<resourceGroup>azure-app-java-rg</resourceGroup>
 			        <pricingTier>F1</pricingTier>
-			        <region>centralindia</region>
-			        <appSettings>
-			            <property>
-			                <name>JAVA_OPTS</name>
-			                <value>-Dserver.port=80</value>
-			            </property>
-			        </appSettings>
+			        <region>eastus</region>
+					<appSettings>
+						<property>
+							<name>JAVA_OPTS</name>
+							<value>-Dserver.port=${PORT}</value>
+						</property>
+					</appSettings>
 			        <runtime>
 			            <os>Linux</os>
 			            <javaVersion>Java 17</javaVersion>
-			            <webContainer>Java SE</webContainer>
+			            <webContainer>Java</webContainer>
 			        </runtime>
 			        <deployment>
 			            <resources>
